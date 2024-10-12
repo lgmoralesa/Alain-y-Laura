@@ -4,6 +4,7 @@ import "./countdown.css";
 export const COUNTDOWN_TARGET = new Date("2025-03-23T16:00:00");
 
 const getTimeLeft = () => {
+  // @ts-ignore
   const totalTimeLeft = COUNTDOWN_TARGET - new Date();
   const days = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24));
   const hours = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24);

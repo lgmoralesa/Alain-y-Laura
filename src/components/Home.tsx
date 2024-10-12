@@ -1,5 +1,3 @@
-import banner from "../assets/propuesta.jpg";
-import banner2 from "../assets/propuesta2.jpg";
 import "../App.css";
 import Countdown from "./countdown";
 
