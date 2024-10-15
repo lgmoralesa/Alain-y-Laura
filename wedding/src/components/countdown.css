@@ -1,14 +1,10 @@
 .countdown .content {
-	width: 100%;
-	display: flex;
+	/*width: 100%;
 	flex-direction: row;
-	justify-content: center;
 	margin: auto;
-	gap: 12px;
-}
-.countdown h2 {
-	margin-bottom: 20px;
-	font-size: 50px;
+	gap: 12px;*/
+	display: flex;
+	justify-content: center;
 }
 
 .countdown .box {
@@ -17,11 +13,12 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 150px;
+	height: 130px;
 	max-width: 150px;
 }
 
 .countdown .value {
+	font-family: "Maven Pro", sans-serif;
 	font-size: 23px;
 	background-color: #cdbda3;
 	color: white;
@@ -29,12 +26,12 @@
 	justify-content: center;
 	align-items: center;
 	border-radius: 8px;
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 	position: relative;
     border-radius: 50%;
 }
-
+/*
 @media screen and (min-width: 550px) {
 	.countdown .content {
 		gap: 30px;
@@ -61,12 +58,12 @@
 		max-width: 200px;
 		height: 150px;
 	}
-}
+}*/
 
 
 .countdown .label {
-	font-size: 20px;
-	font-weight: 100;
-	letter-spacing: 4px;
-	margin-top: 10px;
+	font-family: "Maven Pro", sans-serif;
+	font-style: normal;
+	font-size: 12px;
+	margin-top: 8px;
 }

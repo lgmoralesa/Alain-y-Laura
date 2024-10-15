@@ -1,31 +1,67 @@
+.front-italic-title {
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-regular-space {
+  font-family: "Actor", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.front-italic {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-regular {
+  font-family: "Maven Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-regular-2 {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
 .image {
-  background-image: url('./assets/propuesta2.jpg');
-  height: 380px;
+  background-image: url('./assets/silueta2.png');
+  height: 450px;
   background-size: cover;
-  filter: brightness(70%);
+  filter: brightness(90%);
 }
 
 .text {
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   position: absolute;
-  top: 11rem;
+  top: 6rem;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
   text-align: center;
+  height: 100px;
 }
 
 
-@media (min-width: 600px) {
-    .image { height: 200px; }
-    .text { font-size: 18px; }
+@media (min-width: 550px) {
+    .image { 
+      background-image: url('./assets/silueta4.png');
+      height: 600px; 
+    }
+    /*.text { font-size: 18px; }*/
 }
 
 @media (min-width: 768px) {
-  .image { height: 150px; }
+  /*.image { height: 150px; }*/
 }
 
 @media (min-width: 992px) {
-  .image { height: 380px; }
+  /*.image { height: 380px; }*/
 }

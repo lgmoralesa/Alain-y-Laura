@@ -13,6 +13,13 @@ const getTimeLeft = () => {
   return { days, hours, minutes, seconds };
 };
 
+const labels = [
+  { name: "days", value: "DÍAS" },
+  { name: "hours", value: "HORAS" },
+  { name: "minutes", value: "MINUTOS" },
+  { name: "seconds", value: "SEGUNDOS" },
+];
+
 const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState(() => getTimeLeft());
 
@@ -37,7 +44,10 @@ const Countdown = () => {
               <div className="value">
                 <span>{value}</span>
               </div>
-              <span className="label"> {label} </span>
+              <span className="label">
+                {" "}
+                {labels.find(({ name }) => name === label)?.value}{" "}
+              </span>
             </div>
           );
         })}
