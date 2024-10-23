@@ -1,5 +1,6 @@
 import "../App.css";
 import Countdown from "./countdown";
+import rings from "../assets/rings.png";
 
 const Home = () => {
   return (
@@ -14,7 +15,11 @@ const Home = () => {
         </p>
         <p
           className="font-regular-space"
-          style={{ fontSize: "25px", letterSpacing: "2px", margin: "0" }}
+          style={{
+            fontSize: "23px",
+            letterSpacing: "2px",
+            margin: "-12px 0 0 0",
+          }}
         >
           ALAIN & LAURA
         </p>
@@ -36,7 +41,7 @@ const Home = () => {
           <p
             className="font-regular-2"
             style={{
-              fontSize: "15px",
+              fontSize: "17px",
               margin: "0",
               textAlign: "center",
               color: "#414343",
@@ -47,6 +52,75 @@ const Home = () => {
           </p>
         </div>
         <Countdown />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            margin: "20px 0px",
+          }}
+        >
+          <img
+            src={rings}
+            alt="rings"
+            width="30%"
+            height="30%"
+            style={{ mixBlendMode: "multiply" }}
+          ></img>
+        </div>
+        <div style={{ margin: "auto 30px" }}>
+          <p
+            className="font-section-bold"
+            style={{
+              fontSize: "23px",
+              letterSpacing: "3px",
+              margin: "0",
+              textAlign: "center",
+            }}
+          >
+            CEREMONIA
+          </p>
+          <p
+            className="font-regular-2"
+            style={{
+              fontSize: "17px",
+              margin: "20px 0 0 0",
+              textAlign: "center",
+              color: "#414343",
+            }}
+          >
+            Hacienda Santa Elena
+          </p>
+          <p
+            className="font-regular-2"
+            style={{
+              fontSize: "17px",
+              textAlign: "center",
+              color: "#414343",
+            }}
+          >
+            Te esperemos el
+          </p>
+          <div className="container-date">
+            <p
+              className="font-regular-space"
+              style={{
+                fontSize: "23px",
+              }}
+            >
+              23 MARZO
+            </p>
+
+            <div className="vertical-line"></div>
+            <p
+              className="font-regular-space"
+              style={{
+                fontSize: "23px",
+              }}
+            >
+              4:00 PM
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

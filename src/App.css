@@ -30,8 +30,14 @@
   font-style: normal;
 }
 
+.font-section-bold {
+  font-family: "Mukta", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .image {
-  background-image: url('./assets/silueta2.png');
+  background-image: url('./assets/savetheday.jpg');
   height: 450px;
   background-size: cover;
   filter: brightness(90%);
@@ -41,13 +47,25 @@
   color: white;
   font-size: 20px;
   position: absolute;
-  top: 6rem;
+  top: 4rem;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
   text-align: center;
   height: 100px;
 }
+
+.vertical-line {
+  border-left: 2px solid #b3b9b9;
+  height: 70px;
+}
+
+.container-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 
 
 @media (min-width: 550px) {
