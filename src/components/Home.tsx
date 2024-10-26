@@ -1,8 +1,10 @@
 import "../App.css";
 import Countdown from "./countdown";
 import rings from "../assets/rings.png";
+import { Button } from "antd";
 
 const Home = () => {
+  const url = "https://maps.app.goo.gl/UWv4aHCJVo2TCDZ59";
   return (
     <div>
       <div className="image"></div>
@@ -89,17 +91,12 @@ const Home = () => {
             }}
           >
             Hacienda Santa Elena
-          </p>
-          <p
-            className="font-regular-2"
-            style={{
-              fontSize: "17px",
-              textAlign: "center",
-              color: "#414343",
-            }}
-          >
+            <br />
+            Salón El Bosque
+            <br />
             Te esperemos el
           </p>
+
           <div className="container-date">
             <p
               className="font-regular-space"
@@ -119,6 +116,33 @@ const Home = () => {
             >
               4:00 PM
             </p>
+          </div>
+          <p
+            className="font-regular-2"
+            style={{
+              fontSize: "17px",
+              margin: "20px 0 0 0",
+              textAlign: "center",
+              color: "#414343",
+            }}
+          >
+            Km 1,5 Via Cota-Siberia
+            <br />
+            Cota, Cundinamarca
+          </p>
+          <div style={{ textAlign: "center", margin: "20px 0" }}>
+            <Button
+              type="primary"
+              size="large"
+              onClick={() => window.open(url, "_blank")}
+              style={{
+                background: "#cdbda3",
+                borderRadius: "4px",
+                width: "200px",
+              }}
+            >
+              VER UBICACIÓN
+            </Button>
           </div>
         </div>
       </div>
