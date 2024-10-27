@@ -1,6 +1,5 @@
 import "../App.css";
 import Countdown from "./countdown";
-import rings from "../assets/rings.png";
 import { Button } from "antd";
 import { IconGift, IconRing } from "./Icons.tsx";
 

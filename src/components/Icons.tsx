@@ -1,4 +1,4 @@
-export const IconGift = ({ width, height }) => {
+export const IconGift = ({ width, height }: any) => {
   return (
     <svg
       fill="#000000"
@@ -7,9 +7,7 @@ export const IconGift = ({ width, height }) => {
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
-      //xmlns:xlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 512.001 512.001"
-      //xml:space="preserve"
     >
       <g>
         <g>
@@ -65,7 +63,7 @@ export const IconGift = ({ width, height }) => {
   );
 };
 
-export const IconRing = ({ width, height }) => {
+export const IconRing = ({ width, height }: any) => {
   return (
     <svg
       fill="#000000"
