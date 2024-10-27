@@ -2,6 +2,7 @@ import "../App.css";
 import Countdown from "./countdown";
 import rings from "../assets/rings.png";
 import { Button } from "antd";
+import { IconGift, IconRing } from "./Icons.tsx";
 
 const Home = () => {
   const url = "https://maps.app.goo.gl/UWv4aHCJVo2TCDZ59";
@@ -54,22 +55,10 @@ const Home = () => {
           </p>
         </div>
         <Countdown />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            margin: "20px 0px",
-          }}
-        >
-          <img
-            src={rings}
-            alt="rings"
-            width="30%"
-            height="30%"
-            style={{ mixBlendMode: "multiply" }}
-          ></img>
-        </div>
         <div style={{ margin: "auto 30px" }}>
+          <div style={{ textAlign: "center", margin: "40px 0px 10px 0px" }}>
+            <IconRing width={"80px"} height={"80px"} />
+          </div>
           <p
             className="font-section-bold"
             style={{
@@ -99,7 +88,7 @@ const Home = () => {
 
           <div className="container-date">
             <p
-              className="font-regular-space"
+              className="font-regular"
               style={{
                 fontSize: "23px",
               }}
@@ -109,7 +98,7 @@ const Home = () => {
 
             <div className="vertical-line"></div>
             <p
-              className="font-regular-space"
+              className="font-regular"
               style={{
                 fontSize: "23px",
               }}
@@ -138,10 +127,52 @@ const Home = () => {
               style={{
                 background: "#cdbda3",
                 borderRadius: "4px",
-                width: "200px",
+                padding: "0 30px",
+                //width: "200px",
               }}
             >
               VER UBICACIÓN
+            </Button>
+          </div>
+          <div style={{ textAlign: "center", margin: "40px 0px 10px 0px" }}>
+            <IconGift width={"80px"} height={"80px"} />
+          </div>
+          <p
+            className="font-section-bold"
+            style={{
+              fontSize: "23px",
+              letterSpacing: "3px",
+              margin: "0",
+              textAlign: "center",
+            }}
+          >
+            REGALOS
+          </p>
+          <p
+            className="font-regular-2"
+            style={{
+              fontSize: "17px",
+              margin: "20px 0 0 0",
+              textAlign: "center",
+              color: "#414343",
+            }}
+          >
+            Lo más importante es tu presencia, pero si deseas hacernos un regalo
+            aquí tienes nuestros datos
+          </p>
+          <div style={{ textAlign: "center", margin: "20px 0" }}>
+            <Button
+              type="primary"
+              size="large"
+              onClick={() => window.open(url, "_blank")}
+              style={{
+                background: "#cdbda3",
+                borderRadius: "4px",
+                padding: "0 30px",
+                //width: "200px",
+              }}
+            >
+              VER DATOS BANCARIOS
             </Button>
           </div>
         </div>
