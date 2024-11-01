@@ -1,7 +1,7 @@
 import "../App.css";
 import Countdown from "./countdown";
-import { Button } from "antd";
-import { IconGift, IconRing, IconVideoCamara, IconCamara } from "./Icons.tsx";
+import { Button, Collapse } from "antd";
+import { IconGift, IconRing, IconCamara } from "./Icons.tsx";
 import paris from "../assets/paris.avif";
 import venecia from "../assets/venecia.avif";
 import suiza from "../assets/suiza.webp";
@@ -9,6 +9,7 @@ import suiza from "../assets/suiza.webp";
 const Home = () => {
   const urlLocation = "https://maps.app.goo.gl/UWv4aHCJVo2TCDZ59";
   const urlAlbum = "https://photos.app.goo.gl/k8VyvV2XNEG1CQU8A";
+
   return (
     <div>
       <div className="image"></div>
@@ -88,7 +89,6 @@ const Home = () => {
             <br />
             Te esperemos el
           </p>
-
           <div className="container-date">
             <p
               className="font-regular"
@@ -174,6 +174,66 @@ const Home = () => {
             <img src={venecia} />
             <img src={suiza} />
           </div>
+          <Collapse
+            style={{
+              borderColor: "#cdbda3",
+              backgroundColor: "rgb(205 189 163 / 22%)",
+              borderTopLeftRadius: 0,
+              borderTopRightRadius: 0,
+              marginBottom: "30px",
+            }}
+            items={[
+              {
+                key: "1",
+                label: "VER DATOS DE CUENTA",
+                children: (
+                  <>
+                    <p
+                      className="font-regular-2"
+                      style={{
+                        fontSize: "15px",
+                        margin: "10px",
+                        color: "#414343",
+                      }}
+                    >
+                      Lulo Bank - Cuenta de ahorros
+                    </p>
+
+                    <p
+                      className="font-regular-2"
+                      style={{
+                        fontSize: "15px",
+                        margin: "10px",
+                        color: "#414343",
+                      }}
+                    >
+                      MARIA PATRICIA DEL PILAR SILVA BERNAL
+                    </p>
+                    <p
+                      className="font-regular-2"
+                      style={{
+                        fontSize: "15px",
+                        margin: "10px",
+                        color: "#414343",
+                      }}
+                    >
+                      C.C. 51 677 366
+                    </p>
+                    <p
+                      className="font-regular-2"
+                      style={{
+                        fontSize: "15px",
+                        margin: "10px",
+                        color: "#414343",
+                      }}
+                    >
+                      No. 838789444257
+                    </p>
+                  </>
+                ),
+              },
+            ]}
+          />
         </div>
       </div>
       <div
