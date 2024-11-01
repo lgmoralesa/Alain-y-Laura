@@ -1,13 +1,14 @@
 import "../App.css";
 import Countdown from "./countdown";
 import { Button } from "antd";
-import { IconGift, IconRing } from "./Icons.tsx";
+import { IconGift, IconRing, IconVideoCamara, IconCamara } from "./Icons.tsx";
 import paris from "../assets/paris.avif";
 import venecia from "../assets/venecia.avif";
 import suiza from "../assets/suiza.webp";
 
 const Home = () => {
-  const url = "https://maps.app.goo.gl/UWv4aHCJVo2TCDZ59";
+  const urlLocation = "https://maps.app.goo.gl/UWv4aHCJVo2TCDZ59";
+  const urlAlbum = "https://photos.app.goo.gl/k8VyvV2XNEG1CQU8A";
   return (
     <div>
       <div className="image"></div>
@@ -125,7 +126,7 @@ const Home = () => {
             <Button
               type="primary"
               size="large"
-              onClick={() => window.open(url, "_blank")}
+              onClick={() => window.open(urlLocation, "_blank")}
               style={{
                 background: "#cdbda3",
                 borderRadius: "4px",
@@ -173,21 +174,54 @@ const Home = () => {
             <img src={venecia} />
             <img src={suiza} />
           </div>
-          <div style={{ textAlign: "center", margin: "20px 0" }}>
-            <Button
-              type="primary"
-              size="large"
-              onClick={() => window.open(url, "_blank")}
-              style={{
-                background: "#cdbda3",
-                borderRadius: "4px",
-                padding: "0 30px",
-                //width: "200px",
-              }}
-            >
-              VER DATOS BANCARIOS
-            </Button>
-          </div>
+        </div>
+      </div>
+      <div
+        style={{
+          textAlign: "center",
+          margin: "20px 0",
+          background: "#cdbda3",
+          padding: "20px 0",
+        }}
+      >
+        <IconCamara width={"80px"} height={"80px"} />
+        <p
+          className="font-regular-2"
+          style={{
+            fontSize: "21px",
+            textAlign: "center",
+            color: "white",
+            margin: "10px",
+          }}
+        >
+          COMPARTE FOTOS
+        </p>
+        <p
+          className="font-regular-2"
+          style={{
+            fontSize: "17px",
+            textAlign: "center",
+            color: "white",
+            margin: "10px",
+          }}
+        >
+          ¡Sube fotos de la boda al álbum!
+        </p>
+        <div style={{ textAlign: "center", margin: "20px 0" }}>
+          <Button
+            type="primary"
+            size="large"
+            onClick={() => window.open(urlAlbum, "_blank")}
+            style={{
+              background: "transparent",
+              borderColor: "#ffffff",
+              borderRadius: "4px",
+              padding: "0 30px",
+              //width: "200px",
+            }}
+          >
+            IR AL ÁLBUM
+          </Button>
         </div>
       </div>
     </div>
