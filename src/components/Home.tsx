@@ -1,14 +1,35 @@
 import "../App.css";
 import Countdown from "./countdown";
-import { Button, Collapse } from "antd";
+import { Button, Carousel, Collapse } from "antd";
 import { IconGift, IconRing, IconCamara } from "./Icons.tsx";
-import paris from "../assets/paris.avif";
+import madrid from "../assets/madrid.avif";
+import roma from "../assets/roma.jpg";
+import florencia from "../assets/florencia2.jpg";
 import venecia from "../assets/venecia.avif";
-import suiza from "../assets/suiza.webp";
+import chamonix from "../assets/chamonix.jpg";
+import paris from "../assets/paris.avif";
+import londres from "../assets/londres.jpg";
+import newspaperP from "../../public/newspaper.pdf";
+import newspaperS from "../newspaper.pdf";
+
+const contentStyle: React.CSSProperties = {
+  margin: 0,
+  height: "21vh",
+  width: "100%",
+};
 
 const Home = () => {
   const urlLocation = "https://maps.app.goo.gl/UWv4aHCJVo2TCDZ59";
   const urlAlbum = "https://photos.app.goo.gl/k8VyvV2XNEG1CQU8A";
+  const urlPdf =
+    "https://newgtlds.icann.org/sites/default/files/test-spec-summary-04jun13-en.pdf";
+  const urlPdf2 =
+    "https://lgmoralesa.github.io/Alain-y-Laura/public/newspaper.pdf";
+  const cities = [paris, venecia, roma, florencia, chamonix, londres, madrid];
+
+  console.log("newspaperP", newspaperP);
+  console.log("newspaperS", newspaperS);
+  console.log("urlPdf2", urlPdf2);
 
   return (
     <div>
@@ -169,11 +190,18 @@ const Home = () => {
             hacer:
             <br />
           </p>
-          <div className="slider">
-            <img src={paris} />
-            <img src={venecia} />
-            <img src={suiza} />
-          </div>
+          <br />
+          <Carousel
+            arrows
+            style={{ borderTopLeftRadius: "8px", borderTopRightRadius: "8px" }}
+            className="slick-list"
+          >
+            {cities.map((citie) => (
+              <div key={citie}>
+                <img src={citie} style={contentStyle} />
+              </div>
+            ))}
+          </Carousel>
           <Collapse
             style={{
               borderColor: "#cdbda3",
@@ -229,6 +257,15 @@ const Home = () => {
                     >
                       No. 838789444257
                     </p>
+                    <button
+                      onClick={() =>
+                        navigator.clipboard.writeText(
+                          "Copy this text to clipboard"
+                        )
+                      }
+                    >
+                      Copy
+                    </button>
                   </>
                 ),
               },
@@ -283,6 +320,16 @@ const Home = () => {
             IR AL ÁLBUM
           </Button>
         </div>
+      </div>
+      <div>
+        <object data={urlPdf} type="application/pdf">
+          <iframe
+            src={`https://docs.google.com/viewer?url=${urlPdf}&embedded=true`}
+            width="88%"
+            height="400px"
+            style={{ margin: "20px" }}
+          ></iframe>
+        </object>
       </div>
     </div>
   );
