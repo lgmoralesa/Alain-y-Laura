@@ -9,8 +9,6 @@ import venecia from "../assets/venecia.avif";
 import chamonix from "../assets/chamonix.jpg";
 import paris from "../assets/paris.avif";
 import londres from "../assets/londres.jpg";
-import newspaperP from "../../public/newspaper.pdf";
-import newspaperS from "../newspaper.pdf";
 
 const contentStyle: React.CSSProperties = {
   margin: 0,
@@ -21,15 +19,8 @@ const contentStyle: React.CSSProperties = {
 const Home = () => {
   const urlLocation = "https://maps.app.goo.gl/UWv4aHCJVo2TCDZ59";
   const urlAlbum = "https://photos.app.goo.gl/k8VyvV2XNEG1CQU8A";
-  const urlPdf =
-    "https://newgtlds.icann.org/sites/default/files/test-spec-summary-04jun13-en.pdf";
-  const urlPdf2 =
-    "https://lgmoralesa.github.io/Alain-y-Laura/public/newspaper.pdf";
+  const urlPdf = "https://lgmoralesa.github.io/Alain-y-Laura/newspaper.pdf";
   const cities = [paris, venecia, roma, florencia, chamonix, londres, madrid];
-
-  console.log("newspaperP", newspaperP);
-  console.log("newspaperS", newspaperS);
-  console.log("urlPdf2", urlPdf2);
 
   return (
     <div>
