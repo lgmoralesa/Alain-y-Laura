@@ -9,6 +9,7 @@ import venecia from "../assets/venecia.avif";
 import chamonix from "../assets/chamonix.jpg";
 import paris from "../assets/paris.avif";
 import londres from "../assets/londres.jpg";
+import savings from "../assets/savings.gif";
 
 const contentStyle: React.CSSProperties = {
   margin: 0,
@@ -43,7 +44,6 @@ const Home = () => {
           ALAIN & LAURA
         </p>
       </div>
-      {/* Page content container*/}
 
       {/* Estás invitado */}
       <div style={{ margin: "auto 53px" }}>
@@ -257,6 +257,7 @@ const Home = () => {
                   >
                     C.C. 51 677 366
                   </p>
+                  <img src={savings} style={{ width: "100%" }} />
                 </>
               ),
             },
