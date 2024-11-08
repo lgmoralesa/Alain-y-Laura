@@ -11,12 +11,6 @@ import paris from "../assets/paris.avif";
 import londres from "../assets/londres.jpg";
 import savings from "../assets/savings.gif";
 
-const contentStyle: React.CSSProperties = {
-  margin: 0,
-  height: "21vh",
-  width: "100%",
-};
-
 const Home = () => {
   const urlLocation = "https://maps.app.goo.gl/UWv4aHCJVo2TCDZ59";
   const urlAlbum = "https://photos.app.goo.gl/k8VyvV2XNEG1CQU8A";
@@ -46,7 +40,7 @@ const Home = () => {
       </div>
 
       {/* Estás invitado */}
-      <div style={{ margin: "auto 53px" }}>
+      <div className="section-invite">
         <p
           className="front-italic"
           style={{
@@ -125,7 +119,7 @@ const Home = () => {
               fontSize: "23px",
             }}
           >
-            4:00 PM
+            3:00 PM
           </p>
         </div>
         <p
@@ -158,8 +152,10 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="horizontal-line vertical-line-size"></div>
+
       {/* REGALOS */}
-      <div style={{ margin: "auto 53px" }}>
+      <div className="section-gifts">
         <div style={{ textAlign: "center", margin: "40px 0px 10px 0px" }}>
           <IconGift width={"80px"} height={"80px"} />
         </div>
@@ -191,15 +187,18 @@ const Home = () => {
           ️✨ Con tu ayuda, estos son algunos de los planes que podríamos hacer:
           <br />
         </p>
-        <br />
         <Carousel
           arrows
-          style={{ borderTopLeftRadius: "8px", borderTopRightRadius: "8px" }}
+          style={{
+            borderTopLeftRadius: "8px",
+            borderTopRightRadius: "8px",
+            marginTop: "25px",
+          }}
           className="slick-list"
         >
           {cities.map((citie) => (
             <div key={citie}>
-              <img src={citie} style={contentStyle} />
+              <img src={citie} className="cities-images" />
             </div>
           ))}
         </Carousel>
@@ -276,7 +275,7 @@ const Home = () => {
       >
         <IconCamara width={"80px"} height={"80px"} />
         <p
-          className="font-regular-2"
+          className="font-section-bold"
           style={{
             fontSize: "21px",
             textAlign: "center",
@@ -287,7 +286,7 @@ const Home = () => {
           COMPARTE FOTOS
         </p>
         <p
-          className="font-regular-2"
+          className="font-regular"
           style={{
             fontSize: "17px",
             textAlign: "center",
@@ -297,7 +296,7 @@ const Home = () => {
         >
           ¡Sube fotos de la boda al álbum!
         </p>
-        <div style={{ textAlign: "center", margin: "20px 0" }}>
+        <div style={{ margin: "20px auto", width: "fit-content" }}>
           <Button
             type="primary"
             size="large"
@@ -307,7 +306,6 @@ const Home = () => {
               borderColor: "#ffffff",
               borderRadius: "4px",
               padding: "0 30px",
-              //width: "200px",
             }}
           >
             IR AL ÁLBUM
@@ -315,8 +313,8 @@ const Home = () => {
         </div>
       </div>
 
-      {/* WEDDING POST */}
-      <div style={{ margin: "auto 43px" }}>
+      {/* WEDDING POST  */}
+      <div className="section-newspaper">
         <div style={{ textAlign: "center", margin: "40px 0px 10px 0px" }}>
           <IconLetter width={"80px"} height={"80px"} />
         </div>
@@ -331,21 +329,41 @@ const Home = () => {
         >
           THE WEDDING POST
         </p>
-        <object data={urlPdf} type="application/pdf">
-          <iframe
-            src={`https://docs.google.com/viewer?url=${urlPdf}&embedded=true`}
-            width="100%"
-            height="400px"
-            style={{ marginTop: "20px" }}
-          ></iframe>
-        </object>
+        <div className="iframe-movil">
+          <object data={urlPdf} type="application/pdf">
+            <iframe
+              src={`https://docs.google.com/viewer?url=${urlPdf}&embedded=true`}
+              width="100%"
+              height="400px"
+            ></iframe>
+          </object>
+        </div>
 
-        <a href={urlPdf} target="_blank" rel="noopener noreferrer" download>
-          <div style={{ textAlign: "center", margin: "20px 0" }}>
+        <div className="iframe-desktop">
+          <object
+            data={urlPdf}
+            type="application/pdf"
+            width="100%"
+            height="900px"
+          >
+            <iframe
+              width="100%"
+              src={`https://docs.google.com/viewer?url=${urlPdf}&embedded=true`}
+            ></iframe>
+          </object>
+        </div>
+
+        <a
+          href={urlPdf}
+          target="_blank"
+          rel="noopener noreferrer"
+          download
+          style={{ display: "contents" }}
+        >
+          <div style={{ margin: "20px auto", width: "fit-content" }}>
             <Button
               type="primary"
               size="large"
-              //onClick={() => window.open(urlLocation, "_blank")}
               style={{
                 background: "#cdbda3",
                 borderRadius: "4px",
@@ -358,10 +376,12 @@ const Home = () => {
         </a>
       </div>
 
+      <div className="horizontal-line vertical-line-size"></div>
+
       {/* TE ESPERAMOS */}
       <div
         style={{
-          margin: "53px",
+          margin: "20px auto 50px",
           textAlign: "center",
           color: "rgb(65, 67, 67)",
         }}

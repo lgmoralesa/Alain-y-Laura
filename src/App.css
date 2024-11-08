@@ -10,7 +10,6 @@
   font-style: normal;
 }
 
-
 .front-italic {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
@@ -40,7 +39,7 @@
   background-image: url('./assets/savetheday.jpg');
   height: 450px;
   background-size: cover;
-  filter: brightness(90%);
+  /*filter: brightness(90%);*/
 }
 
 .text {
@@ -56,8 +55,13 @@
 }
 
 .vertical-line {
-  border-left: 2px solid #b3b9b9;
+  border-left: 2px solid #cdbda3;
   height: 70px;
+}
+
+.horizontal-line{
+  border-top: 2px solid #cdbda3;
+  width: 70px;
 }
 
 .container-date {
@@ -67,18 +71,83 @@
   margin: 20px 0px;
 }
 
-@media (min-width: 550px) {
-    .image { 
-      background-image: url('./assets/silueta4.png');
-      height: 600px; 
-    }
-    /*.text { font-size: 18px; }*/
+
+.section-invite{
+  margin: auto 53px
 }
 
-@media (min-width: 768px) {
-  /*.image { height: 150px; }*/
+.section-gifts{
+  margin: auto 53px;
 }
 
-@media (min-width: 992px) {
-  /*.image { height: 380px; }*/
+.cities-images{
+  margin: 0;
+  height: 21vh;
+  width: 100%;
+}
+
+.section-newspaper{
+  margin: auto 38px;
+}
+
+.newspaper-iframe{
+  margin-top: 20px;
+  width: 100%; 
+  height: 400px;
+}
+
+.iframe-desktop{
+  display: none;
+}
+
+.vertical-line-size{
+  margin: 45px auto 25px;
+  width: 250px;
+}
+
+@media (width > 600px) {
+  
+  .image { 
+    background-image: url('./assets/savetheday3.png');
+    height: 600px; 
+  }
+
+  .section-invite{
+    margin: auto;
+    width: 600px;
+  }
+
+  .container-date {
+    margin: 20px auto;
+    width: 400px;
+  }
+
+  .section-gifts{
+    margin: auto;
+    width: 700px;
+  }
+
+  .cities-images{
+    height: 35vh;
+  }
+
+  .section-newspaper{
+    margin: 20px auto;
+    width: max-content;
+  }
+
+  .iframe-movil{
+    display: none;
+  }
+
+  .iframe-desktop{
+    display: block;
+    width: 800px;
+    margin-top: 20px;
+  }
+
+  .vertical-line-size{
+    width: 450px;
+  }
+
 }
