@@ -3,19 +3,18 @@ import Countdown from "./countdown";
 import { Button, Carousel, Collapse } from "antd";
 import { IconGift, IconRing, IconCamara, IconLetter } from "./Icons.tsx";
 import madrid from "../assets/madrid.avif";
-import roma from "../assets/roma.jpg";
-import florencia from "../assets/florencia2.jpg";
 import venecia from "../assets/venecia.avif";
 import chamonix from "../assets/chamonix.jpg";
 import paris from "../assets/paris.avif";
 import londres from "../assets/londres.jpg";
 import savings from "../assets/savings.gif";
+import dresscode from "../assets/dresscode-removebg.png";
 
 const Home = () => {
   const urlLocation = "https://maps.app.goo.gl/UWv4aHCJVo2TCDZ59";
   const urlAlbum = "https://photos.app.goo.gl/k8VyvV2XNEG1CQU8A";
   const urlPdf = "https://lgmoralesa.github.io/Alain-y-Laura/newspaper.pdf";
-  const cities = [paris, venecia, roma, florencia, chamonix, londres, madrid];
+  const cities = [paris, venecia, chamonix, londres, madrid];
 
   return (
     <div>
@@ -154,6 +153,117 @@ const Home = () => {
 
       <div className="horizontal-line vertical-line-size"></div>
 
+      {/* DRESS CODE */}
+      <div style={{ margin: "auto 40px" }}>
+        <p
+          className="font-section-bold"
+          style={{
+            fontSize: "23px",
+            letterSpacing: "3px",
+            margin: "0",
+            textAlign: "center",
+          }}
+        >
+          CÓDIGO DE
+          <br />
+          VESTIMENTA
+        </p>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <img
+            src={dresscode}
+            style={{
+              width: "50%",
+              height: "50%",
+              margin: "20px 0 0 0",
+            }}
+          />
+        </div>
+        <p
+          className="front-italic"
+          style={{
+            fontSize: "36px",
+            margin: "0",
+            textAlign: "center",
+            color: "rgb(178 155 117)",
+          }}
+        >
+          Formal
+        </p>
+
+        <div style={{ display: "flex", margin: "20px 0px" }}>
+          <div style={{ width: "50%", marginRight: "12px" }}>
+            <p
+              className="font-regular"
+              style={{
+                fontSize: "23px",
+                textAlign: "center",
+                margin: "10px 0 20px 0",
+              }}
+            >
+              Ellos
+            </p>
+            <div
+              className="font-regular-2"
+              style={{
+                fontSize: "17px",
+                textAlign: "center",
+                color: "#414343",
+              }}
+            >
+              <p>Traje formal</p>
+              <p>NO: Gris</p>
+              <br />
+              <p style={{ marginTop: "23px" }}>Corbata (opcional)</p>
+            </div>
+          </div>
+          <div className="vertical-line" style={{ height: "250px" }}></div>
+
+          <div style={{ width: "50%", marginLeft: "12px" }}>
+            <p
+              className="font-regular"
+              style={{
+                fontSize: "23px",
+                textAlign: "center",
+                margin: "10px 0 20px 0",
+              }}
+            >
+              Ellas
+            </p>
+            <div
+              className="font-regular-2"
+              style={{
+                fontSize: "17px",
+                textAlign: "center",
+                color: "#414343",
+              }}
+            >
+              <p>Vestido largo</p>
+              <p>NO: Blanco,Beige, Crema, Dorado, Plateado, Rosado</p>
+              <p>Tacones (tacon ancho por el pasto)</p>
+            </div>
+          </div>
+        </div>
+        <p
+          className="font-regular-2"
+          style={{
+            fontSize: "17px",
+            margin: "30px 0",
+            textAlign: "center",
+            color: "#414343",
+          }}
+        >
+          ¡Prepárate para brillar!
+        </p>
+      </div>
+
+      <div className="horizontal-line vertical-line-size"></div>
+
       {/* REGALOS */}
       <div className="section-gifts">
         <div style={{ textAlign: "center", margin: "40px 0px 10px 0px" }}>
@@ -179,12 +289,14 @@ const Home = () => {
             color: "#414343",
           }}
         >
-          Tu presencia en nuestra boda es lo más importante. <br />
-          Si quieres ayudarnos a financiar nuestra luna de miel te agradecemos
-          mucho por ello! <br />
+          Tu presencia en nuestra boda es lo más importante. Si quieres
+          ayudarnos a financiar nuestra luna de miel
           <br />
-          Estamos listos para celebrar el amor con una luna de miel en Europa
-          ️✨ Con tu ayuda, estos son algunos de los planes que podríamos hacer:
+          ¡te agradecemos mucho por ello! <br />
+          <br />
+          Estamos listos para celebrar nuestro amor con una luna de miel en
+          Europa. Con tu ayuda, estos son algunos de los planes que podríamos
+          hacer:
           <br />
         </p>
         <Carousel
