@@ -87,7 +87,7 @@
 }
 
 .section-newspaper{
-  margin: auto 38px;
+  margin: auto 0px;
 }
 
 .newspaper-iframe{
@@ -133,7 +133,7 @@
 
   .section-newspaper{
     margin: 20px auto;
-    width: max-content;
+    /*width: max-content;*/
   }
 
   .iframe-movil{
