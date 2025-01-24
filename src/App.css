@@ -77,13 +77,19 @@
 }
 
 .section-gifts{
-  margin: auto 53px;
+  margin: auto 40px;
 }
 
 .cities-images{
   margin: 0;
   height: 21vh;
   width: 100%;
+}
+
+.dresscode-image{
+  width: 55%;
+  height: 55%;
+  margin: 20px 0 0 0;
 }
 
 .section-newspaper{
@@ -136,6 +142,12 @@
 
   .cities-images{
     height: 35vh;
+  }
+
+  .dresscode-image{
+    width: 15%;
+    height: 15%;
+    margin: 20px 0 0 0;
   }
 
   .section-newspaper{

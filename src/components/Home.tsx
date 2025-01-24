@@ -175,19 +175,12 @@ const Home = () => {
             justifyContent: "center",
           }}
         >
-          <img
-            src={dresscode}
-            style={{
-              width: "50%",
-              height: "50%",
-              margin: "20px 0 0 0",
-            }}
-          />
+          <img src={dresscode} className="dresscode-image" />
         </div>
         <p
           className="front-italic"
           style={{
-            fontSize: "36px",
+            fontSize: "38px",
             margin: "0",
             textAlign: "center",
             color: "rgb(178 155 117)",
