@@ -443,13 +443,11 @@ const Home = () => {
         </p>
         <div className="iframe-movil">
           <object data={urlPdf} type="application/pdf">
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <iframe
-                src={`https://docs.google.com/viewer?url=${urlPdf}&embedded=true`}
-                width="80%"
-                height="400px"
-              ></iframe>
-            </div>
+            <iframe
+              src={`https://docs.google.com/viewer?url=${urlPdf}&embedded=true`}
+              width="100%"
+              height="400px"
+            ></iframe>
           </object>
         </div>
 
