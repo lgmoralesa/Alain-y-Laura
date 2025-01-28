@@ -71,7 +71,7 @@ const Home = () => {
       </div>
 
       {/* CEREMONIA */}
-      <div style={{ margin: "auto 53px" }}>
+      <div id="ceremony" style={{ margin: "auto 53px" }}>
         <div style={{ textAlign: "center", margin: "40px 0px 10px 0px" }}>
           <IconRing width={"80px"} height={"80px"} />
         </div>
@@ -154,7 +154,7 @@ const Home = () => {
       <div className="horizontal-line vertical-line-size"></div>
 
       {/* DRESS CODE */}
-      <div style={{ margin: "auto 40px" }}>
+      <div id="dresscode" style={{ margin: "auto 40px" }}>
         <p
           className="font-section-bold"
           style={{
@@ -258,7 +258,7 @@ const Home = () => {
       <div className="horizontal-line vertical-line-size"></div>
 
       {/* REGALOS */}
-      <div className="section-gifts">
+      <div id="gifts" className="section-gifts">
         <div style={{ textAlign: "center", margin: "40px 0px 10px 0px" }}>
           <IconGift width={"80px"} height={"80px"} />
         </div>
@@ -315,6 +315,7 @@ const Home = () => {
             borderTopRightRadius: 0,
             marginBottom: "30px",
           }}
+          defaultActiveKey={["1"]}
           items={[
             {
               key: "1",
@@ -371,6 +372,7 @@ const Home = () => {
 
       {/* COMPARTE FOTOS */}
       <div
+        id="album"
         style={{
           textAlign: "center",
           margin: "20px 0",
@@ -419,7 +421,7 @@ const Home = () => {
       </div>
 
       {/* WEDDING POST  */}
-      <div className="section-newspaper">
+      <div id="newspaper" className="section-newspaper">
         <div style={{ textAlign: "center", margin: "40px 0px 10px 0px" }}>
           <IconLetter width={"80px"} height={"80px"} />
         </div>
